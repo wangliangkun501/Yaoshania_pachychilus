@@ -3,6 +3,7 @@ tRNAscan-SE  -E  --thread 10  -o  tRNA.results  --gff  tRNA.gff3 -f  tRNA.struct
 -m tRNA.summary ../Yp.genome.fasta 1>tRNAscan-SE.log 2>&1
 
 ## rRNA
+barrnap  --kingdom  euk --threads 40 --outseq  rRNA.fasta  ../Yp.genome.fasta 1>rRNA.gff  2>barrnap.log
 
 
 ## other ncRNAs
