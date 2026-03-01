@@ -4,7 +4,7 @@ tRNAscan-SE  -E  --thread 10  -o  tRNA.results  --gff  tRNA.gff3 -f  tRNA.struct
 
 ## rRNA
 barrnap  --kingdom  euk --threads 40 --outseq  rRNA.fasta  ../Yp.genome.fasta 1>rRNA.gff  2>barrnap.log
-
+blastn -query rRNA.fasta -db Rfam_rRNA -evalue 1e-5 -outfmt 6 -out blast.result -task megablast -num_threads 40
 
 ## other ncRNAs
 cmscan --cut_ga --rfam --nohmmonly --cpu 40 -Z 451.3 --tblout genome_rfam.tblout \
